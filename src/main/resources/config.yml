@@ -1,0 +1,40 @@
+debug: false #Enable this to print error messages to console.
+
+items:
+  default-lootbox:
+    material: BEACON
+    display-name: "&c&lDefault Lootbox &7(Right Click)"
+    lore:
+      - "&7Right-Click to open!"
+commands:
+  lootbox:
+    description: "Main command for LegendLootboxes."
+reward-categories:
+  GENERAL:
+    display: "&f&lGeneral Loot (&7%items% items&f&l)"
+    show-in-lore: true
+    item-lore-without-title: "&f&l* %item-amount%x %item-display-name%"
+    command-lore: "&f&l* %title%" #You could also use %command% as a variable.
+    guaranteed-loot: false
+  JACKPOT:
+    display: "&f&lJackpot Loot (&7%items% items&f&l)"
+    show-in-lore: true
+    item-lore-without-title: "&f&l* %item-amount%x %item-display-name%"
+    command-lore: "&f&l* %title%"
+    guaranteed-loot: false
+  GUARANTEED:
+    display: "&f&lGuaranteed Loot (&7%items% items&f&l)"
+    show-in-lore: true
+    item-lore-without-title: "&f&l* %item-amount%x %item-display-name%"
+    command-lore: "&f&l* %title%"
+    guaranteed-loot: true #All items in this category will be given regardless of total loot amount.
+messages:
+  open-broadcast: "&a%player% has opened the %lootbox% lootbox!"
+  reward-each-item-broadcast: "&f&l* %item-amount%x %item%"
+  reward-each-title-broadcast: "&f&l* %title%"
+  default-lootbox-open-message: "&a&l(!) &aYou have successfully opened the %lootbox% lootbox!"
+  cannot-preview: "&c&l(!) &cYou cannot preview this lootbox's (%lootbox%) rewards."
+  commands:
+    no-permission: "&c&l(!) &cYou do not have permission to execute &n/%command%&c!"
+    incorrect-usage: "&cIncorrect Usage: &f/%command% %subcommand% %excess-arguments%"
+    incorrect-usage-description: "&7%description%"

@@ -1,0 +1,19 @@
+name: LegendLootboxes
+version: ${project.version}
+main: landon.legendlootboxes.LegendLootboxes
+api-version: 1.13
+permissions:
+  legendlootboxes.commands.create:
+    description: Allows players to run /lootbox create.
+  legendlootboxes.commands.edit:
+    description: Allows players to interact with the Lootbox editor.
+  legendlootboxes.commands.give:
+    description: Allows players to give lootboxes.
+  legendlootboxes.commands.delete:
+    description: Allows players to delete lootboxes.
+  legendlootboxes.commands.additemreward:
+    description: Allows players to solely add item rewards through /lootbox additemreward.
+  legendlootboxes.commands.open:
+    description: Allows players to forcefully open lootboxes for other players.
+  legendlootboxes.preview:
+    description: Allows players to preview lootbox rewards by left-clicking the lootboxes.
